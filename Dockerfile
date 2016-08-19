@@ -1,8 +1,8 @@
-FROM aksw/dld-bootstrap
+FROM fumihiro/dld-bootstrap
 
-MAINTAINER Markus Ackermann <ackermann@informatik.uni-leipzig.de>
+MAINTAINER Fumihiro Kato <fumi@fumi.me>
 
-RUN dnf install -y findutils wget
+RUN apt-get update && apt-get install -y wget
 
 COPY docker/run.sh docker/dbpedia-dld.yml /download.sh /
 
